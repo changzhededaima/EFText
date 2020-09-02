@@ -16,5 +16,5 @@ namespace EFModelLibrary.BLL
         {
             CurrentDal = this.CurrentDBSession.studentidal;
         }
-    }
+    } 
 }
