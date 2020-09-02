@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+    <script src="~/Scripts/DExpUI-framework.js"></script>
+    <div class="row">
+        <div onclick="show()">
+            查询
+        </div>
+        <div id="text">
+
+
+        </div>
+    </div>
+</body>
+<script>
+    function show() {
+    var flag = "1";
+    var param = "2";
+    var postData = {
+        flag: escape(flag),
+        param: escape(param),
+
+    };
+    getAjax('../Home/IndexShow', postData, function (rsdata) {
+
+        $("#text").append(rsdata);
+
+
+        })
+    }
+</script>
+</html>
